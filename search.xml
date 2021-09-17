@@ -4,17 +4,36 @@
   
     
     <entry>
-      <title>about java</title>
-      <link href="/2021/09/17/java/"/>
-      <url>/2021/09/17/java/</url>
+      <title>Conclusion of the second Week</title>
+      <link href="/2021/09/17/week-02/"/>
+      <url>/2021/09/17/week-02/</url>
       
-        <content type="html"><![CDATA[<h2 id="About-java"><a href="#About-java" class="headerlink" title="About java"></a><font color ="blue">About java</font></h2><h6 id="特点如下："><a href="#特点如下：" class="headerlink" title="特点如下："></a>特点如下：</h6><ul><li>_<font color="red">面向对象</font><ol><li><strong>封装</strong> 把过程和数据包围起来，对数据的访问只能通过已定义的接口。</li><li><strong>继承</strong> 使用已存在的类的定义作为基础建立新类的技术，新类的定义可以增加新的数据或新的功能，也可以用父类的功能，但不能选择性地继承父类。</li><li><strong>多态</strong> 允许将子类类型的指针赋值给父类类型的指针。</li></ol></li><li><em><font color = "red">强类型</font></em><ol><li><strong>java.net</strong> 这个包提供了网络、套接字处理器和 Internet 实用工具类。</li><li><strong>java.sql</strong> 这个包提供了结构化查询语言数据库字段类型和方法的实现。根据系统的不同，这个包的类可能会通过一个特定的数据库系统实现，或者缺省时通过 ODBC(开放数据库连接)标准的直接映射实现。</li><li><strong>java.io</strong> 这个包中的类提供了输入输出服务，用于读出和写入文件数据，访问键盘输入和打印输出。</li></ol></li></ul><p>首先谈谈面向对象，关于类和对象，这个一定要有深刻的认识，在类中，首先一个最重要的概念就是构造方法，为什么说它重要，就是因为你只要需要创建一个类地实例对象就需要调用到构造方法，这个就决定了这个类一开始要做什么。</p><p>接下来要看的就是具体类地方法，这个直接说明了它能操作什么，有什么功能，在方法中返回值也很重要，这时不得不提到 java 的强类型，真因为这样，你必须要了解一个方法具体的返回值，是对象还是那种数据类型，这样你才好定义容器或者相应的类来接收这个返回值，才好进行接下来的操作。</p>]]></content>
+        <content type="html"><![CDATA[<h5 id="date-2021-9-13-2021-9-19"><a href="#date-2021-9-13-2021-9-19" class="headerlink" title="date:2021.9.13~2021.9.19"></a><p align=right>date:2021.9.13~2021.9.19</p></h5><p><strong>Finshed content:</strong></p><p><strong>Unfinshed content:</strong></p><p><strong>Expection:</strong></p><p>暂时还没想好怎么排版以及内容填充</p><img src="https://cdn.jsdelivr.net/gh/shiyouhan/image/未完待续.png" width=100px>]]></content>
       
       
       
         <tags>
             
-            <tag> 关于 java </tag>
+            <tag> 每周总结 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>about java</title>
+      <link href="/2021/09/17/java/"/>
+      <url>/2021/09/17/java/</url>
+      
+        <content type="html"><![CDATA[<h6 id="特点如下："><a href="#特点如下：" class="headerlink" title="特点如下："></a>特点如下：</h6><ul><li>_<font color="red">面向对象</font><ol><li><strong>封装</strong> 把过程和数据包围起来，对数据的访问只能通过已定义的接口。</li><li><strong>继承</strong> 使用已存在的类的定义作为基础建立新类的技术，新类的定义可以增加新的数据或新的功能，也可以用父类的功能，但不能选择性地继承父类。</li><li><strong>多态</strong> 允许将子类类型的指针赋值给父类类型的指针。</li></ol></li><li><em><font color = "red">强类型</font></em><ol><li><strong>java.net</strong> 这个包提供了网络、套接字处理器和 Internet 实用工具类。</li><li><strong>java.sql</strong> 这个包提供了结构化查询语言数据库字段类型和方法的实现。根据系统的不同，这个包的类可能会通过一个特定的数据库系统实现，或者缺省时通过 ODBC(开放数据库连接)标准的直接映射实现。</li><li><strong>java.io</strong> 这个包中的类提供了输入输出服务，用于读出和写入文件数据，访问键盘输入和打印输出。</li></ol></li></ul><p>首先谈谈面向对象，关于类和对象，这个一定要有深刻的认识，在类中，首先一个最重要的概念就是构造方法，为什么说它重要，就是因为你只要需要创建一个类地实例对象就需要调用到构造方法，这个就决定了这个类一开始要做什么。</p><p>接下来要看的就是具体类地方法，这个直接说明了它能操作什么，有什么功能，在方法中返回值也很重要，这时不得不提到 java 的强类型，真因为这样，你必须要了解一个方法具体的返回值，是对象还是那种数据类型，这样你才好定义容器或者相应的类来接收这个返回值，才好进行接下来的操作。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> java </tag>
             
         </tags>
       
@@ -27,13 +46,13 @@
       <link href="/2021/09/17/about/"/>
       <url>/2021/09/17/about/</url>
       
-        <content type="html"><![CDATA[<h2 id="About-me"><a href="#About-me" class="headerlink" title="About me"></a><font color ="blue">About me</font></h2><center>     <h1>菜鸟小施</h1>     <div>         <span>             <img src="https://niit-soft.oss-cn-hangzhou.aliyuncs.com/assets/phone-solid.svg" width="20px">             18018384983         </span>         ·         <span>             <img src="https://niit-soft.oss-cn-hangzhou.aliyuncs.com/assets/envelope-solid.svg" width="20px">             2470752581@qq.com         </span>         ·         <span>             <img src="https://cdn.jsdelivr.net/gh/shiyouhan/image/头像.jpg" width="20px">             <a href="https://github.com/shiyouhan">Syhan的Github</a>         </span>         ·         <span>             <img src="https://cdn.jsdelivr.net/gh/shiyouhan/image/头像.jpg" width="20px">             <a href="https://Syhan.github.io">Syhan的博客</a>         </span>     </div> </center><h2 id="个人信息"><a href="#个人信息" class="headerlink" title=" 个人信息"></a><img src="https://niit-soft.oss-cn-hangzhou.aliyuncs.com/assets/info-circle-solid.svg" width="30px"> 个人信息</h2><ul><li>在校大学生</li></ul><h2 id="技能清单"><a href="#技能清单" class="headerlink" title=" 技能清单"></a><img src="https://niit-soft.oss-cn-hangzhou.aliyuncs.com/assets/tools-solid.svg" width="30px"> 技能清单</h2><ul><li>★★☆ Java</li><li>★★☆ HTML/CSS/JavaScript</li><li>★★☆ C++</li><li>★★☆ MySQL</li><li>★★☆ Linux</li><li>★☆☆ Python</li></ul>]]></content>
+        <content type="html"><![CDATA[<center>     <h1>菜鸟小施</h1>     <div>         <span>             <img src="https://niit-soft.oss-cn-hangzhou.aliyuncs.com/assets/phone-solid.svg" width="20px">             18018384983         </span>         ·         <span>             <img src="https://niit-soft.oss-cn-hangzhou.aliyuncs.com/assets/envelope-solid.svg" width="20px">             2470752581@qq.com         </span>         ·         <span>             <img src="https://cdn.jsdelivr.net/gh/shiyouhan/image/头像.jpg" width="20px">             <a href="https://github.com/shiyouhan">Syhan的Github</a>         </span>         ·         <span>             <img src="https://cdn.jsdelivr.net/gh/shiyouhan/image/头像.jpg" width="20px">             <a href="https://Syhan.github.io">Syhan的博客</a>         </span>     </div> </center><h2 id="个人信息"><a href="#个人信息" class="headerlink" title=" 个人信息"></a><img src="https://niit-soft.oss-cn-hangzhou.aliyuncs.com/assets/info-circle-solid.svg" width="30px"> 个人信息</h2><ul><li>在校大学生</li></ul><h2 id="技能清单"><a href="#技能清单" class="headerlink" title=" 技能清单"></a><img src="https://niit-soft.oss-cn-hangzhou.aliyuncs.com/assets/tools-solid.svg" width="30px"> 技能清单</h2><ul><li>★★☆ Java</li><li>★★☆ HTML/CSS/JavaScript</li><li>★★☆ C++</li><li>★★☆ MySQL</li><li>★★☆ Linux</li><li>★☆☆ Python</li></ul>]]></content>
       
       
       
         <tags>
             
-            <tag> 关于 Syhan </tag>
+            <tag> Syhan </tag>
             
         </tags>
       
