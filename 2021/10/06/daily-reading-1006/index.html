@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Maven 自定义 archetype, Syhan&#39;s Blog">
+    <meta name="keywords" content="daily-reading-1006, Syhan&#39;s Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Maven 自定义 archetype | Syhan&#39;s Blog</title>
+    <title>daily-reading-1006 | Syhan&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Maven 自定义 archetype</h1>
+                    <h1 class="description center-align post-title">daily-reading-1006</h1>
                 </div>
             </div>
         </div>
@@ -431,12 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/maven/">
-                                <span class="chip bg-color">maven</span>
-                            </a>
-                        
-                            <a href="/tags/javafx/">
-                                <span class="chip bg-color">javafx</span>
+                            <a href="/tags/reading/">
+                                <span class="chip bg-color">reading</span>
                             </a>
                         
                     </div>
@@ -460,7 +456,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    879
+                    215
                 </div>
                 
 
@@ -477,68 +473,24 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><blockquote>
-<p>由于项目开发过程中，大多数开发人员遵循的模板不一致，都是从别的项目中copy过来的。有时候项目出现了一个大bug，经过排查可能发现是工具类用错了，容易踩坑；另外，每次新建项目重复创建类似的结构也很是浪费时间。</p>
+                <blockquote>
+<p>Even miracles take a little time.</p>
 </blockquote>
-<p> 基于以上情况，有必要进行<strong>工程脚手架建设</strong>。<font color="red">重要</font>﻿</p>
-<p>﻿</p>
-<h2 id="二、方案"><a href="#二、方案" class="headerlink" title="二、方案"></a>二、方案</h2><ul>
-<li><p>方案一：使用纯脚本的方式，在 project 目录下创建需要的模板文件</p>
-</li>
-<li><p>方案二：使用 mvn archetype 插件</p>
-<p>这里我们采用方案二</p>
-</li>
-</ul>
-<h2 id="三、自定义archetype步骤"><a href="#三、自定义archetype步骤" class="headerlink" title="三、自定义archetype步骤"></a>三、自定义archetype步骤</h2><h3 id="1-说明"><a href="#1-说明" class="headerlink" title="1. 说明"></a>1. 说明</h3><p>​     环境版本说明</p>
-<ul>
-<li>openjdk  “11.0.12”</li>
-<li>IntelliJ IDEA 2021.2.2 (Ultimate Edition)</li>
-<li>Maven 3.8.2</li>
-</ul>
-<h3 id="2-本地Maven配置"><a href="#2-本地Maven配置" class="headerlink" title="2. 本地Maven配置"></a>2. 本地Maven配置</h3><p>Maven-&gt;conf-&gt;settings.xml配置如下，这里仅指定了本地仓库路径和阿里云Maven镜像</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">settings</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.0.0&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>/Users/mqxu/tools/maven_jar<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>aliyunmaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">name</span>&gt;</span>阿里云公共仓库<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://maven.aliyun.com/repository/central<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-创建模板项目"><a href="#3-创建模板项目" class="headerlink" title="3. 创建模板项目"></a>3. 创建模板项目</h3><p>正常创建Maven项目，完成需要的配置即可，正确运行即可。</p>
-<p>我们就以现在的java-jfx项目为例，依赖、结构已经就绪，还自定义了标题栏。</p>
-<p>我们希望把它做成一个模版，以后可以直接基于它来创建 javafx相关的项目。</p>
-<h3 id="4-从当前项目创建archetype"><a href="#4-从当前项目创建archetype" class="headerlink" title="4. 从当前项目创建archetype"></a>4. 从当前项目创建archetype</h3><p>在项目根目录（和pom.xml文件同级）执行下面的语句﻿</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn archetype:create-from-project </span><br></pre></td></tr></table></figure>
-
-<p>应该会报错</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiyouhan/image/1004-1.png"></p>
-<p><strong>解决方法:</strong> </p>
-<p><strong>把maven目录conf中的settings.xml文件，复制到你电脑当前用户目录的隐藏目录 .m2 中</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiyouhan/image/1004-2.png"></p>
-<p>  maven clean一下， 重新运行上一步的命令，即可构建成功，并在target目录生成了如图所示的文件</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiyouhan/image/1004-3.png"></p>
-<h3 id="5-生成并发布archetype"><a href="#5-生成并发布archetype" class="headerlink" title="5. 生成并发布archetype"></a>5. 生成并发布archetype</h3><p><strong>在项目根目录，依次执行以下命令</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> target/generated-sources/archetype   <span class="comment"># 进入模版目录</span></span><br><span class="line">mvn install         										<span class="comment"># 安装到本地仓库</span></span><br><span class="line">mvn archetype:crawl 										<span class="comment"># 在本地仓库生成 archetype 配置文件</span></span><br></pre></td></tr></table></figure>
-
-<p>执行成功后，在本地仓库的根目录会生成archetype-catalog.xml骨架配置文件，如图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiyouhan/image/1004-4.png"></p>
-<p>打开该文件内容如下，可以看到我们的项目骨架已经生成</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiyouhan/image/1004-5.png"></p>
-<blockquote>
-<p>至此，模板项目已经创建完成。</p>
-</blockquote>
-<h2 id="四、使用模板"><a href="#四、使用模板" class="headerlink" title="四、使用模板"></a>四、使用模板</h2><blockquote>
-<p>在需要创建项目的地方启动终端，执行下面的命令（local表示从本地读取骨架项目模版，如果从网络读取maven提供的模版，会比较多）</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn archetype:generate -DarchetypeCatalog=<span class="built_in">local</span></span><br></pre></td></tr></table></figure>
-
-<p>按照图中步骤操作即可</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiyouhan/image/1004-6.png"></p>
-<p>在IDEA中打开新项目</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiyouhan/image/1004-7.png"></p>
-<p>注意：如果要在上面窗口配置git，点击红色那行，点笔的图标，修改目录为当前的项目。因为之前的git配置，git仓库是java-jfx的父级目录JavaStudy，所以这里也默认把我项目的父级目录Desktop作为默认仓库地址了。</p>
-<p>maven刷新完成后，仔细检查一下新项目的pom、module-info、fxml等相关文件</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiyouhan/image/1004-8.png"></p>
-<p>这些需要修改为新的</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiyouhan/image/1004-9.png"></p>
-<blockquote>
-<p> 随便改改图片颜色就是一个新项目啦，脚手架有没有很好用？</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/shiyouhan/image/1004-10.png"></p>
+<h4 id="1-JDK-和-JRE-有什么区别？"><a href="#1-JDK-和-JRE-有什么区别？" class="headerlink" title="1. JDK 和 JRE 有什么区别？"></a>1. JDK 和 JRE 有什么区别？</h4><p>JDK（Java Development Kit）  Java开发工具</p>
+<p>JRE （Java Runtime Environment） Java运行环境</p>
+<p>JDK中包含JRE，JDK8前有一个名为jre的目录，里面包含两个文件夹bin和lib</p>
+<p>bin就是JVM，lib就是JVM工作所需要的类库</p>
+<hr>
+<h4 id="2-和-equals-的区别是什么？"><a href="#2-和-equals-的区别是什么？" class="headerlink" title="2. == 和 equals 的区别是什么？"></a>2. == 和 equals 的区别是什么？</h4><p>对于基本类型， ==比较的是值；</p>
+<p>对于引用类型， ==比较的是地址；</p>
+<p>equals不能用于基本类型的比较；</p>
+<p>如果没有重写equals， equals就相当于==；</p>
+<p>如果重写了equals方法，equals比较得是对象的内容；</p>
+<hr>
+<h4 id="3-final在-Java-中有什么作用？"><a href="#3-final在-Java-中有什么作用？" class="headerlink" title="3. final在 Java 中有什么作用？"></a>3. final在 Java 中有什么作用？</h4><p>-final修饰的成员变量，必须在生命的同时赋值，一旦创建不可修改；</p>
+<p>-final修饰的方法，不能被子类重写；</p>
+<p>-final类中的方法默认是final的；</p>
+<p>-private类型的方法默认是final的；</p>
 
                 
             </div>
@@ -565,7 +517,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://shiyouhan.github.io/2021/10/06/archetype/">http://shiyouhan.github.io/2021/10/06/archetype/</a>
+                    <a href="http://shiyouhan.github.io/2021/10/06/daily-reading-1006/">http://shiyouhan.github.io/2021/10/06/daily-reading-1006/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -603,12 +555,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/maven/">
-                                    <span class="chip bg-color">maven</span>
-                                </a>
-                            
-                                <a href="/tags/javafx/">
-                                    <span class="chip bg-color">javafx</span>
+                                <a href="/tags/reading/">
+                                    <span class="chip bg-color">reading</span>
                                 </a>
                             
                         </div>
@@ -780,9 +728,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/10/06/daily-reading-1006/">
                     <div class="card-image">
@@ -800,9 +749,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -811,6 +760,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -829,13 +779,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/19/java%E7%BB%A7%E6%89%BF/">
+                <a href="/2021/10/06/archetype/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="java继承和多态">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Maven 自定义 archetype">
                         
-                        <span class="card-title">java继承和多态</span>
+                        <span class="card-title">Maven 自定义 archetype</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -846,7 +796,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-06
                             </span>
                         <span class="publish-author">
                             
@@ -859,8 +809,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
+                    <a href="/tags/maven/">
+                        <span class="chip bg-color">maven</span>
+                    </a>
+                    
+                    <a href="/tags/javafx/">
+                        <span class="chip bg-color">javafx</span>
                     </a>
                     
                 </div>
