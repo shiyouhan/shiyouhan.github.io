@@ -5,6 +5,25 @@
     
     <entry>
       <title>daily reading</title>
+      <link href="/2021/10/07/daily-reading-1007/"/>
+      <url>/2021/10/07/daily-reading-1007/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>I’m willing to fight for those who cannot for themselves.</p></blockquote><h4 id="1-Java中的Math-round-1-5-等于多少？"><a href="#1-Java中的Math-round-1-5-等于多少？" class="headerlink" title="1. Java中的Math.round(-1.5)等于多少？"></a>1. Java中的Math.round(-1.5)等于多少？</h4><p>Math提供了三个与取整有关的方法：ceil、floor、round</p><p>ceil: 向上取整；floor: 向下取整; round:  四舍五入（加0.5然后乡下取整）</p><p>所以结果等于-2</p><h4 id="2-String-属于基础的数据类型吗？"><a href="#2-String-属于基础的数据类型吗？" class="headerlink" title="2. String 属于基础的数据类型吗？"></a>2. String 属于基础的数据类型吗？</h4><p>不属于。</p><p>八种基本数据类型： byte、short、char、int、long、double、float、boolean。</p><h4 id="3-String-str-“i”-与String-str-new-String-“i”-一样吗？"><a href="#3-String-str-“i”-与String-str-new-String-“i”-一样吗？" class="headerlink" title="3. String str = “i” 与String str = new String(“i”)一样吗？"></a>3. String str = “i” 与String str = new String(“i”)一样吗？</h4><p>String str= “i”会将其分配到常量池中，如果常量池中存在，就将i的地址赋给变量，如果没有就创建一个再赋给变量。</p><p>String str= new String(“i” )会将对象分配到堆中，即使内存一样，还是会重新创建一个新的对象。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> reading </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>daily reading</title>
       <link href="/2021/10/06/daily-reading-1006/"/>
       <url>/2021/10/06/daily-reading-1006/</url>
       
