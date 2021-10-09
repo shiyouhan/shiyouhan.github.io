@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="java继承和多态, Syhan&#39;s Blog">
+    <meta name="keywords" content="reading 10.08, Syhan&#39;s Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>java继承和多态 | Syhan&#39;s Blog</title>
+    <title>reading 10.08 | Syhan&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">java继承和多态</h1>
+                    <h1 class="description center-align post-title">reading 10.08</h1>
                 </div>
             </div>
         </div>
@@ -368,8 +368,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java/">
-                                <span class="chip bg-color">java</span>
+                            <a href="/tags/daily-reading/">
+                                <span class="chip bg-color">daily-reading</span>
                             </a>
                         
                     </div>
@@ -384,7 +384,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-19
+                    2021-10-08
                 </div>
                 
 
@@ -393,7 +393,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    138
                 </div>
                 
 
@@ -410,121 +410,21 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>继承是java面向对象编程技术的一块基石，因为它允许创建分等级层次的类。</p>
-<p>继承就是子类继承父类的特征和行为，使得子类对象（实例）具有父类的实例域和方法，或子类从父类继承方法，使得子类具有父类相同的行为。</p>
+                <blockquote>
+<p>Remember,you can always find light in the dark.</p>
+</blockquote>
+<h4 id="1-如何将字符串反转？"><a href="#1-如何将字符串反转？" class="headerlink" title="1. 如何将字符串反转？"></a>1. 如何将字符串反转？</h4><p>将对象封装到stringBuilder中，调用reverse方法反转。</p>
 <hr>
-<h6 id="类的继承格式："><a href="#类的继承格式：" class="headerlink" title="类的继承格式："></a>类的继承格式：</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> 父类 </span>&#123;...&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> 子类 <span class="keyword">extends</span> 父类 </span>&#123;...&#125;</span><br></pre></td></tr></table></figure>
-
+<h4 id="2-new-String-“a”-new-String-“b”-会创建几个对象？"><a href="#2-new-String-“a”-new-String-“b”-会创建几个对象？" class="headerlink" title="2. new String(“a”) + new String(“b”)会创建几个对象？"></a>2. new String(“a”) + new String(“b”)会创建几个对象？</h4><p>对象1： new StringBuilder()</p>
+<p>对象2：new String(“a”)</p>
+<p>对象3：常量池中的”a”</p>
+<p>对象4：new String(“b”)</p>
+<p>对象5：常量池中的”b”</p>
+<p>深入剖析：StringBuilder中的toString():</p>
+<p>对象6：new String(“ab”)</p>
+<p>强调，toString()的调用，在字符串常量池中，没有生成”ab”。</p>
 <hr>
-<h6 id="为什么需要继承？"><a href="#为什么需要继承？" class="headerlink" title="为什么需要继承？"></a>为什么需要继承？</h6><p>代码存在重复，导致后果就是代码量大且臃肿，而且维护性不高(维护性主要是后期需要修改的时候，就需要修改很多的代码，容易出错)，所以要从根本上解决这两段代码的问题，就需要继承，将两段代码中相同的部分提取出来组成 一个父类。</p>
-<hr>
-<h6 id="继承类型："><a href="#继承类型：" class="headerlink" title="继承类型："></a><strong>继承类型：</strong></h6><ul>
-<li><p>单一继承</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;...&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> <span class="keyword">extends</span> <span class="title">A</span> </span>&#123;...&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>多重继承</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;...&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> <span class="keyword">extends</span> <span class="title">A</span> </span>&#123;...&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">C</span> <span class="keyword">extends</span> <span class="title">B</span> </span>&#123;...&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>不同类继承同一个类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;...&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> <span class="keyword">extends</span> <span class="title">A</span> </span>&#123;...&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">C</span> <span class="keyword">extends</span> <span class="title">A</span> </span>&#123;...&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p><font color=red>不支持多继承</font>（extends）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;...&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;...&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">C</span> <span class="keyword">extends</span> <span class="title">A</span>,<span class="title">B</span> </span>&#123;...&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<hr>
-<p><strong>继承关键字</strong></p>
-<ol>
-<li><p><strong>extends</strong> (单一继承)</p>
-<p>只能继承一个类，也就是说，一个子类只能拥有一个父类</p>
-</li>
-<li><p><strong>implements</strong>(多继承)</p>
-<p>可以同时继承多个接口（接口跟接口之间采用逗号分隔）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;...&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;...&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">C</span> <span class="keyword">implements</span> <span class="title">A</span>,<span class="title">B</span> </span>&#123;...&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p><strong>final</strong></p>
-<ul>
-<li>声明类可以把类定义为不能继承</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;...&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>用于修饰方法，该方法不能被子类重写</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> 返回值类型 方法名() &#123;...&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p><strong>super</strong></p>
-<p>访问直接父类中被隐藏的数据成员</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">super</span>.数据成员</span><br></pre></td></tr></table></figure>
-
-<p>调用直接父类中被重写的成员方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">super</span>.成员方法([参数列表])</span><br></pre></td></tr></table></figure>
-
-<p>调用直接父类的构造方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">super</span>([参数列表]</span><br></pre></td></tr></table></figure></li>
-<li><p><strong>this</strong></p>
-<p>访问当前对象的数据成员</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.数据成员</span><br></pre></td></tr></table></figure>
-
-<p>访问当前对象的成员方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.成员方法([参数列表])</span><br></pre></td></tr></table></figure>
-
-<p>当有重载的构造方法时，用于引用同类的其他构造方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>([参数列表]</span><br></pre></td></tr></table></figure></li>
-</ol>
-<hr>
-<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><p>多态是同一个行为具有多个不同表现形式或形态的能力。</p>
-<p>多态就是同一个接口，使用不同的实例而执行不同操作。</p>
-<h6 id="多态的必要条件："><a href="#多态的必要条件：" class="headerlink" title="多态的必要条件："></a>多态的必要条件：</h6><ul>
-<li>继承</li>
-<li>重写</li>
-<li>父类引用子类对象</li>
-</ul>
-<hr>
-<h3 id="重写-override"><a href="#重写-override" class="headerlink" title="重写(override)"></a>重写(override)</h3><p>重写是子类对父类的允许访问的方法的实现过程进行重新编写, 返回值和形参都不能改变。也就是说子类能够根据需要实现父类的方法。<font color = red>外壳不变，核心重写！</font></p>
-<p>下面举例说明:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">walk</span><span class="params">()</span></span>&#123;</span><br><span class="line">      System.out.println(<span class="string">&quot;人在走路&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">walk</span><span class="params">()</span></span>&#123;</span><br><span class="line">      System.out.println(<span class="string">&quot;儿童在奔跑&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Override</span></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">      Person p = <span class="keyword">new</span> Person(); <span class="comment">// Person 对象</span></span><br><span class="line">      Person c = <span class="keyword">new</span> Child(); <span class="comment">// Child 对象</span></span><br><span class="line"> </span><br><span class="line">      p.walk();<span class="comment">// 执行 Person 类的方法</span></span><br><span class="line"> </span><br><span class="line">      c.walk();<span class="comment">// 执行 Child 类的方法</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>编译结果如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">人在走路</span><br><span class="line">儿童在奔跑</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>使用super关键字进行重写：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">walk</span><span class="params">()</span></span>&#123;</span><br><span class="line">      System.out.println(<span class="string">&quot;人在走路&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">walk</span><span class="params">()</span></span>&#123;</span><br><span class="line">      <span class="keyword">super</span>.walk();  <span class="comment">//super类的方法(上面关键字super有提到)</span></span><br><span class="line">      System.out.println(<span class="string">&quot;儿童在奔跑&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Override</span></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">      Person c = <span class="keyword">new</span> Child(); <span class="comment">// Child 对象</span></span><br><span class="line">      c.walk();<span class="comment">// 执行 Child 类的方法</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>编译结果如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">人在走路</span><br><span class="line">儿童在奔跑</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="重载-overload"><a href="#重载-overload" class="headerlink" title="重载(overload)"></a>重载(overload)</h3><p>重载是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。</p>
-<p>每个重载的方法（或者构造函数）都必须有一个独一无二的参数类型列表。</p>
-<p>下面举例说明：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Overload</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;test1&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;test2&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">test</span><span class="params">(<span class="keyword">int</span> a,String s)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;test3&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;returntest3&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">test</span><span class="params">(String s,<span class="keyword">int</span> a)</span></span>&#123;  <span class="comment">//参数类型顺序不同亦为不同</span></span><br><span class="line">        System.out.println(<span class="string">&quot;test4&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;returntest4&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Overload o = <span class="keyword">new</span> Overload();</span><br><span class="line">        System.out.println(o.test());</span><br><span class="line">        o.test(<span class="number">1</span>);</span><br><span class="line">        System.out.println(o.test(<span class="number">1</span>,<span class="string">&quot;test3&quot;</span>));</span><br><span class="line">        System.out.println(o.test(<span class="string">&quot;test4&quot;</span>,<span class="number">1</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>编译结果如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">test1</span><br><span class="line">1</span><br><span class="line">test2</span><br><span class="line">test3</span><br><span class="line">returntest3</span><br><span class="line">test4</span><br><span class="line">returntest4</span><br></pre></td></tr></table></figure>
-
-<hr>
-<table>
-<thead>
-<tr>
-<th>区别</th>
-<th>参数列表</th>
-<th>返回类型</th>
-<th>异常</th>
-<th>访问</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>重写</td>
-<td>一定不能修改</td>
-<td>一定不能修改</td>
-<td>可以减少或删除</td>
-<td>一定不能做更严格的限制</td>
-</tr>
-<tr>
-<td>重载</td>
-<td>必须修改</td>
-<td>可以修改</td>
-<td>可以修改</td>
-<td>可以修改</td>
-</tr>
-</tbody></table>
-<p><img src="https://cdn.jsdelivr.net/gh/shiyouhan/image/%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD.png"></p>
+<h4 id="3-String-类的常用方法有哪些？"><a href="#3-String-类的常用方法有哪些？" class="headerlink" title="3. String 类的常用方法有哪些？"></a>3. String 类的常用方法有哪些？</h4><p>equals、length、contains、replace、split、hashcode、indexof、substring、trim、toUpperCase、toLowerCase、isEmpty等。</p>
 
                 
             </div>
@@ -551,7 +451,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://shiyouhan.github.io/2021/09/19/java%E7%BB%A7%E6%89%BF/">http://shiyouhan.github.io/2021/09/19/java%E7%BB%A7%E6%89%BF/</a>
+                    <a href="http://shiyouhan.github.io/2021/10/08/daily-reading-1008/">http://shiyouhan.github.io/2021/10/08/daily-reading-1008/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -589,8 +489,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/java/">
-                                    <span class="chip bg-color">java</span>
+                                <a href="/tags/daily-reading/">
+                                    <span class="chip bg-color">daily-reading</span>
                                 </a>
                             
                         </div>
@@ -781,17 +681,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/10/06/archetype/">
+                <a href="/2021/10/08/daily-reading-1008/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Maven 自定义 archetype">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="reading 10.08">
                         
-                        <span class="card-title">Maven 自定义 archetype</span>
+                        <span class="card-title">reading 10.08</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -801,9 +702,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -812,15 +713,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/maven/">
-                        <span class="chip bg-color">maven</span>
-                    </a>
-                    
-                    <a href="/tags/javafx/">
-                        <span class="chip bg-color">javafx</span>
+                    <a href="/tags/daily-reading/">
+                        <span class="chip bg-color">daily-reading</span>
                     </a>
                     
                 </div>
@@ -834,13 +732,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/17/java/">
+                <a href="/2021/10/07/daily-reading-1007/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="about java">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="reading 10.07">
                         
-                        <span class="card-title">about java</span>
+                        <span class="card-title">reading 10.07</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -851,7 +749,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-07
                             </span>
                         <span class="publish-author">
                             
@@ -864,8 +762,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
+                    <a href="/tags/daily-reading/">
+                        <span class="chip bg-color">daily-reading</span>
                     </a>
                     
                 </div>
