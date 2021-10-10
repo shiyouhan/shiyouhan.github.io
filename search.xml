@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>reading 10.09</title>
+      <link href="/2021/10/09/daily-reading-1009/"/>
+      <url>/2021/10/09/daily-reading-1009/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>If you focus on what you left behind, you will never be able to see what lies ahead.</p></blockquote><h4 id="1-普通类和抽象类有哪些区别？"><a href="#1-普通类和抽象类有哪些区别？" class="headerlink" title="1. 普通类和抽象类有哪些区别？"></a>1. 普通类和抽象类有哪些区别？</h4><p>抽象类不能被实例化；抽象类可以有抽象方法，只需申明，无需实现；</p><p>有抽象方法的类一定是抽象类；抽象类的子类必须实现抽象类中的所有抽象方法，</p><p>否则子类仍然是抽象类；抽象方法不能申明为静态、不能被static、final修饰。</p><h4 id="2-接口和抽象类有什么区别？"><a href="#2-接口和抽象类有什么区别？" class="headerlink" title="2.接口和抽象类有什么区别？"></a>2.接口和抽象类有什么区别？</h4><p>（1）接口</p><p>接口使用interface修饰；接口不能实例化；类可以实现多个接口；</p><p>Java8之前，接口中的方法都是抽象方法，省略了public abstract；</p><p>Java8之后，接口中可以定义静态方法，静态方法必须有方法体，普通方法没有方法体，需要被实现；</p><p>（2）抽象类</p><p>抽象类使用abstract修饰；抽象类不能被实例化；抽象类只能单继承；</p><p>抽象类中可以包含抽象方法和非抽象方法，非抽象方法需要有方法体；</p><p>如果一个类继承了抽象类：</p><p>-如果实现了所有的抽象方法，子类可以不是抽象类；</p><p>-如果没有实现所有的抽象方法，子类仍然是抽象类；</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> daily-reading </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>reading 10.08</title>
       <link href="/2021/10/08/daily-reading-1008/"/>
       <url>/2021/10/08/daily-reading-1008/</url>
