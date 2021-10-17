@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>reading 10.16</title>
+      <link href="/2021/10/16/daily-reading-1016/"/>
+      <url>/2021/10/16/daily-reading-1016/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>The answer must be in the attempt.</p></blockquote><h4 id="Java-8-特性"><a href="#Java-8-特性" class="headerlink" title="Java 8 特性"></a>Java 8 特性</h4><ul><li><p>接口的默认方法（Default Methods for Interfaces）</p></li><li><p>Lambda表达式（Lambda expressions）</p></li><li><p>函数式接口（Functional Interfaces）</p></li><li><p>方法和构造函数的引用（Method and Constructor References）</p></li><li><p>Lambda 表达式作用域（Lambda Scopes）</p><ul><li>访问局部变量</li><li>访问字段和静态变量</li><li>访问默认接口方法</li></ul></li><li><p>内置函数式接口（Built-in Functional Interfaces）</p><ul><li>Predicates</li><li>Functions</li><li>Suppliers</li><li>Consumers</li><li>Comparators</li></ul></li><li><p>Optionals</p></li><li><p>Streams(流)</p><ul><li>Filter(过滤)</li><li>Sorted(排序)</li><li>Map(映射)</li><li>Match(匹配)</li><li>Count(计数)</li><li>Reduce(规约)</li></ul></li><li><p>Parallel Streams(并行流)</p><ul><li>Sequential Sort(串行排序)</li><li>Parallel Sort(并行排序)</li></ul></li><li><p>Maps</p></li><li><p>Data API(日期相关API)</p><ul><li>Clock</li><li>Timezones(时区)</li><li>LocalTime(本地时间)</li><li>LocalDate(本地日期)</li><li>LocalDateTime(本地日期时间)</li></ul></li><li><p>Annotations(注释)</p></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> daily-reading </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>reading 10.15</title>
+      <link href="/2021/10/15/daily-reading-1015/"/>
+      <url>/2021/10/15/daily-reading-1015/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>The man who embraces the dark is never without sight.</p></blockquote><h4 id="1-Java为什么不允许从静态方法中访问非静态变量？"><a href="#1-Java为什么不允许从静态方法中访问非静态变量？" class="headerlink" title="1. Java为什么不允许从静态方法中访问非静态变量？"></a>1. Java为什么不允许从静态方法中访问非静态变量？</h4><p>1.静态变量属于类本身，在类加载的时候就会分配内存，可以通过类名直接访问；</p><p>2.非静态变量属于类的对象，只有在类的对象产生时，才会分配内存，通过类的实例去访问；</p><p>3.静态方法也属于类本身，但是此时没有类的实例，内存中没有非静态变量，所以无法调用。</p><hr><h4 id="2-在-Java-中，什么时候用重载，什么时候用重写？"><a href="#2-在-Java-中，什么时候用重载，什么时候用重写？" class="headerlink" title="2. 在 Java 中，什么时候用重载，什么时候用重写？"></a>2. 在 Java 中，什么时候用重载，什么时候用重写？</h4><p>（1）重载是多态的集体体现，在类中，要以统一的方式处理不同类型数据的时候，可以用重载。</p><p>（2）重写的使用是建立在继承关系上的，子类在继承父类的基础上，增加新的功能，可以用重写。</p><p>（3）简单总结：</p><p>重载是多样性，重写是增强剂；</p><p>如果目的是提高程序的多样性和健壮性，以适配不同场景使用时，使用重载进行扩展；</p><p>如果目的是在不修改的原方法及源代码的基础上对方法进行扩展或增强时，使用重写；</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> daily-reading </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>reading 10.14</title>
       <link href="/2021/10/14/daily-reading-1014/"/>
       <url>/2021/10/14/daily-reading-1014/</url>

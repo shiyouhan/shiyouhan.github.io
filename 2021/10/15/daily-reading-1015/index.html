@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="reading 10.12, Syhan&#39;s Blog">
+    <meta name="keywords" content="reading 10.15, Syhan&#39;s Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>reading 10.12 | Syhan&#39;s Blog</title>
+    <title>reading 10.15 | Syhan&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">reading 10.12</h1>
+                    <h1 class="description center-align post-title">reading 10.15</h1>
                 </div>
             </div>
         </div>
@@ -384,7 +384,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-12
+                    2021-10-15
                 </div>
                 
 
@@ -393,7 +393,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    253
+                    319
                 </div>
                 
 
@@ -411,22 +411,18 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<p>Power resides where men beileve it resides.</p>
+<p>The man who embraces the dark is never without sight.</p>
 </blockquote>
-<h4 id="1-Java-中操作字符串都有哪些类？他们之间有什么区别？"><a href="#1-Java-中操作字符串都有哪些类？他们之间有什么区别？" class="headerlink" title="1. Java 中操作字符串都有哪些类？他们之间有什么区别？"></a>1. Java 中操作字符串都有哪些类？他们之间有什么区别？</h4><p>（1）String</p>
-<p>String是不可变对象，每次对String类型的改变时都会生成一个新的对象。</p>
-<p>（2）StringBuilder</p>
-<p>线程不安全，效率高，多用于单线程</p>
-<p>（3）StringBuffer</p>
-<p>线程安全，由于加锁的原因，效率不如StringBuilder,多用于多线程；</p>
-<p>不频繁的字符串操使用String，操作频繁的情况不建议使用String。</p>
-<p>StringBuilder &gt; StringBuffer &gt; String</p>
+<h4 id="1-Java为什么不允许从静态方法中访问非静态变量？"><a href="#1-Java为什么不允许从静态方法中访问非静态变量？" class="headerlink" title="1. Java为什么不允许从静态方法中访问非静态变量？"></a>1. Java为什么不允许从静态方法中访问非静态变量？</h4><p>1.静态变量属于类本身，在类加载的时候就会分配内存，可以通过类名直接访问；</p>
+<p>2.非静态变量属于类的对象，只有在类的对象产生时，才会分配内存，通过类的实例去访问；</p>
+<p>3.静态方法也属于类本身，但是此时没有类的实例，内存中没有非静态变量，所以无法调用。</p>
 <hr>
-<h4 id="2-在Java中，为什么不允许静态方法中访问非静态变量？"><a href="#2-在Java中，为什么不允许静态方法中访问非静态变量？" class="headerlink" title="2. 在Java中，为什么不允许静态方法中访问非静态变量？"></a>2. 在Java中，为什么不允许静态方法中访问非静态变量？</h4><ol>
-<li>静态变量属于类本身，在类加载的时候就会分配内存，可以通过类名直接访问；</li>
-<li> 非静态变量属于类的对象，只有在类的对象产生是，才会分配内存，通过类的实例去访问；</li>
-<li>静态方法也属于类本身，但是此时没有类的实例，内存中没有非静态变量，所以无法使用。</li>
-</ol>
+<h4 id="2-在-Java-中，什么时候用重载，什么时候用重写？"><a href="#2-在-Java-中，什么时候用重载，什么时候用重写？" class="headerlink" title="2. 在 Java 中，什么时候用重载，什么时候用重写？"></a>2. 在 Java 中，什么时候用重载，什么时候用重写？</h4><p>（1）重载是多态的集体体现，在类中，要以统一的方式处理不同类型数据的时候，可以用重载。</p>
+<p>（2）重写的使用是建立在继承关系上的，子类在继承父类的基础上，增加新的功能，可以用重写。</p>
+<p>（3）简单总结：</p>
+<p>重载是多样性，重写是增强剂；</p>
+<p>如果目的是提高程序的多样性和健壮性，以适配不同场景使用时，使用重载进行扩展；</p>
+<p>如果目的是在不修改的原方法及源代码的基础上对方法进行扩展或增强时，使用重写；</p>
 
                 
             </div>
@@ -453,7 +449,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://shiyouhan.github.io/2021/10/12/daily-reading-1012/">http://shiyouhan.github.io/2021/10/12/daily-reading-1012/</a>
+                    <a href="http://shiyouhan.github.io/2021/10/15/daily-reading-1015/">http://shiyouhan.github.io/2021/10/15/daily-reading-1015/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -687,13 +683,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/10/13/daily-reading-1013/">
+                <a href="/2021/10/16/daily-reading-1016/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="reading 10.13">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="reading 10.16">
                         
-                        <span class="card-title">reading 10.13</span>
+                        <span class="card-title">reading 10.16</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -704,7 +700,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-13
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-16
                         </span>
                         <span class="publish-author">
                             
@@ -732,13 +728,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/10/11/daily-reading-1011/">
+                <a href="/2021/10/14/daily-reading-1014/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="reading 10.11">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="reading 10.14">
                         
-                        <span class="card-title">reading 10.11</span>
+                        <span class="card-title">reading 10.14</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -749,7 +745,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-14
                             </span>
                         <span class="publish-author">
                             
